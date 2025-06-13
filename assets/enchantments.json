@@ -2,6 +2,7 @@
     "fire_protection": {
         "id_name": "fire_protection",
         "name": "Fire Protection",
+        "description": "Reduces fire damage and burn time",
         "max_level": 4,
         "weight": 5,
         "translation_key": "enchantment.minecraft.fire_protection",
