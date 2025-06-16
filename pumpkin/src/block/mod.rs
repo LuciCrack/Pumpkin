@@ -45,6 +45,8 @@ use blocks::redstone::redstone_torch::RedstoneTorchBlock;
 use blocks::redstone::redstone_wire::RedstoneWireBlock;
 use blocks::redstone::repeater::RepeaterBlock;
 use blocks::redstone::target_block::TargetBlock;
+use blocks::redstone::tripwire::TripwireBlock;
+use blocks::redstone::tripwire_hook::TripwireHookBlock;
 use blocks::signs::SignBlock;
 use blocks::slabs::SlabBlock;
 use blocks::stairs::StairBlock;
@@ -70,6 +72,7 @@ use pumpkin_world::BlockStateId;
 use pumpkin_world::item::ItemStack;
 use rand::Rng;
 
+use crate::block::blocks::plant::roots::RootsBlock;
 use crate::block::registry::BlockRegistry;
 use crate::entity::item::ItemEntity;
 use crate::world::World;
@@ -122,6 +125,7 @@ pub fn default_registry() -> Arc<BlockRegistry> {
     manager.register(FlowerbedBlock);
     manager.register(LeafLitterBlock);
     manager.register(WallBlock);
+    manager.register(RootsBlock);
     manager.register(NetherPortalBlock);
     manager.register(TallPlantBlock);
     manager.register(NoteBlock);
@@ -140,6 +144,8 @@ pub fn default_registry() -> Arc<BlockRegistry> {
     manager.register(ButtonBlock);
     manager.register(LeverBlock);
     manager.register(ObserverBlock);
+    manager.register(TripwireBlock);
+    manager.register(TripwireHookBlock);
 
     // Piston
     manager.register(PistonBlock);
